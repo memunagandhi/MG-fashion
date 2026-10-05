@@ -1,0 +1,94 @@
+/* MG Fashion - Custom Styles */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Inter:wght@400;500&family=JetBrains+Mono&display=swap');
+
+:root {
+  --radius: 0.25rem;
+
+  /* Warm neutral palette — cream, taupe, sage */
+  --background: #f5f0e6;
+  --foreground: #2d2926;
+  --card: #faf8f5;
+  --card-foreground: #2d2926;
+  --popover: #faf8f5;
+  --popover-foreground: #2d2926;
+
+  --primary: #1a1817;
+  --primary-foreground: #f5f0e6;
+
+  --secondary: #b5a48b;
+  --secondary-foreground: #2d2926;
+
+  --muted: #ebe5d9;
+  --muted-foreground: #7a7369;
+
+  --accent: #8ba88e;
+  --accent-foreground: #fcfbf9;
+
+  --destructive: #8b3a3a;
+  --destructive-foreground: #fcfbf9;
+
+  --border: #d9d1c1;
+  --input: #e0d9cb;
+  --ring: #8ba88e;
+
+  --cream: #f5f0e6;
+  --taupe: #b5a48b;
+  --sage: #8ba88e;
+  --clay: #8b5a4a;
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+.hairline {
+  height: 1px;
+  background: var(--border);
+}
+
+.reveal {
+  animation: reveal 1.1s cubic-bezier(.2,.7,.2,1) both;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::after {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(60,40,20,0.06) 1px, transparent 1px);
+  background-size: 3px 3px;
+  mix-blend-mode: multiply;
+  opacity: 0.4;
+}
+
+/* Tailwind configuration for custom colors */
+/* This will be used in the script tag in HTML */

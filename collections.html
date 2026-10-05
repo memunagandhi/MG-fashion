@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections — MG Fashion Lookbook</title>
+    <meta name="description" content="Explore the MG Fashion lookbook: slow-made garments in natural fibers.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: 'var(--background)',
+                        foreground: 'var(--foreground)',
+                        card: 'var(--card)',
+                        'card-foreground': 'var(--card-foreground)',
+                        primary: 'var(--primary)',
+                        'primary-foreground': 'var(--primary-foreground)',
+                        secondary: 'var(--secondary)',
+                        'secondary-foreground': 'var(--secondary-foreground)',
+                        muted: 'var(--muted)',
+                        'muted-foreground': 'var(--muted-foreground)',
+                        accent: 'var(--accent)',
+                        'accent-foreground': 'var(--accent-foreground)',
+                        destructive: 'var(--destructive)',
+                        'destructive-foreground': 'var(--destructive-foreground)',
+                        border: 'var(--border)',
+                        input: 'var(--input)',
+                        ring: 'var(--ring)',
+                        cream: 'var(--cream)',
+                        taupe: 'var(--taupe)',
+                        sage: 'var(--sage)',
+                        clay: 'var(--clay)',
+                    },
+                    fontFamily: {
+                        display: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex min-h-screen flex-col">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
+            <a href="index.html" class="flex items-baseline gap-2">
+                <span class="font-display text-2xl tracking-tight">MG</span>
+                <span class="eyebrow">Fashion</span>
+            </a>
+            <nav class="hidden items-center gap-10 md:flex">
+                <a href="index.html" class="text-sm tracking-wide text-foreground/70 transition hover:text-foreground">Home</a>
+                <a href="collections.html" class="text-sm tracking-wide text-foreground font-medium">Collections</a>
+                <a href="about.html" class="text-sm tracking-wide text-foreground/70 transition hover:text-foreground">Atelier</a>
+                <a href="contact.html" class="text-sm tracking-wide text-foreground/70 transition hover:text-foreground">Contact</a>
+            </nav>
+            <a href="contact.html" class="hidden rounded-full border border-foreground/80 px-5 py-2 text-xs uppercase tracking-[0.2em] text-foreground transition hover:bg-foreground hover:text-background md:inline-block">
+                Inquire
+            </a>
+            <button id="menu-toggle" class="md:hidden text-foreground">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+        <div id="mobile-nav" class="hidden md:hidden border-t border-border bg-background px-6 py-6 space-y-4">
+            <a href="index.html" class="block text-sm uppercase tracking-widest text-foreground/70">Home</a>
+            <a href="collections.html" class="block text-sm uppercase tracking-widest text-foreground">Collections</a>
+            <a href="about.html" class="block text-sm uppercase tracking-widest text-foreground/70">Atelier</a>
+            <a href="contact.html" class="block text-sm uppercase tracking-widest text-foreground/70">Contact</a>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <section class="border-b border-border">
+            <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+                <p class="eyebrow">Collection N° 07 — A/W 26</p>
+                <h1 class="mt-6 font-display text-5xl leading-[1.05] text-balance md:text-7xl">
+                    A wardrobe for <span class="italic">soft winters</span>.
+                </h1>
+                <p class="mt-6 max-w-2xl text-muted-foreground">
+                    Forty pieces, numbered and dated. Photographed in available light
+                    in our Lisbon atelier through the month of January.
+                </p>
+            </div>
+        </section>
+
+        <section class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-12">
+                <figure class="group lg:col-span-7">
+                    <div class="overflow-hidden bg-muted">
+                        <img src="assets/hero.jpg" alt="Aurora Silk Gown" class="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-[1.02]">
+                    </div>
+                    <figcaption class="mt-5 flex items-start justify-between gap-6">
+                        <div>
+                            <p class="text-xs tracking-[0.24em] uppercase text-muted-foreground">Look 01</p>
+                            <p class="mt-1 font-display text-2xl">Aurora Silk Gown</p>
+                        </div>
+                        <p class="max-w-xs text-right text-sm text-muted-foreground">Strapless silk-cotton gown, hand-draped bodice.</p>
+                    </figcaption>
+                </figure>
+                <figure class="group lg:col-span-5">
+                    <div class="overflow-hidden bg-muted">
+                        <img src="assets/look-1.jpg" alt="Atelier Suit" class="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-[1.02]">
+                    </div>
+                    <figcaption class="mt-5 flex items-start justify-between gap-6">
+                        <div>
+                            <p class="text-xs tracking-[0.24em] uppercase text-muted-foreground">Look 02</p>
+                            <p class="mt-1 font-display text-2xl">Atelier Suit</p>
+                        </div>
+                        <p class="max-w-xs text-right text-sm text-muted-foreground">Oversized cream linen suit with horn buttons.</p>
+                    </figcaption>
+                </figure>
+                <figure class="group lg:col-span-5">
+                    <div class="overflow-hidden bg-muted">
+                        <img src="assets/look-3.jpg" alt="Shawl Collar Coat" class="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-[1.02]">
+                    </div>
+                    <figcaption class="mt-5 flex items-start justify-between gap-6">
+                        <div>
+                            <p class="text-xs tracking-[0.24em] uppercase text-muted-foreground">Look 03</p>
+                            <p class="mt-1 font-display text-2xl">Shawl Collar Coat</p>
+                        </div>
+                        <p class="max-w-xs text-right text-sm text-muted-foreground">Double-faced wool, raw-edge shawl collar.</p>
+                    </figcaption>
+                </figure>
+                <figure class="group lg:col-span-7">
+                    <div class="overflow-hidden bg-muted">
+                        <img src="assets/look-2.jpg" alt="Sage Drape Gown" class="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-[1.02]">
+                    </div>
+                    <figcaption class="mt-5 flex items-start justify-between gap-6">
+                        <div>
+                            <p class="text-xs tracking-[0.24em] uppercase text-muted-foreground">Look 04</p>
+                            <p class="mt-1 font-display text-2xl">Sage Drape Gown</p>
+                        </div>
+                        <p class="max-w-xs text-right text-sm text-muted-foreground">One-shoulder sage cupro, hand-rolled hems.</p>
+                    </figcaption>
+                </figure>
+                <figure class="group lg:col-span-12">
+                    <div class="overflow-hidden bg-muted">
+                        <img src="assets/look-4.jpg" alt="Wrap & Shawl Set" class="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-[1.02]">
+                    </div>
+                    <figcaption class="mt-5 flex items-start justify-between gap-6">
+                        <div>
+                            <p class="text-xs tracking-[0.24em] uppercase text-muted-foreground">Look 05</p>
+                            <p class="mt-1 font-display text-2xl">Wrap & Shawl Set</p>
+                        </div>
+                        <p class="max-w-xs text-right text-sm text-muted-foreground">Taupe wrap skirt with a sage cashmere shawl.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-32 border-t border-border bg-muted/40">
+        <div class="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-4 lg:px-10">
+            <div class="md:col-span-2">
+                <p class="font-display text-3xl">MG Fashion</p>
+                <p class="mt-3 max-w-sm text-sm text-muted-foreground">
+                    An independent atelier crafting considered garments from natural fibers,
+                    stitched slowly, worn endlessly.
+                </p>
+            </div>
+            <div>
+                <p class="eyebrow mb-4">Explore</p>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="collections.html" class="hover:text-foreground/60 transition">Collections</a></li>
+                    <li><a href="about.html" class="hover:text-foreground/60 transition">Atelier</a></li>
+                    <li><a href="contact.html" class="hover:text-foreground/60 transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="eyebrow mb-4">Studio</p>
+                <ul class="space-y-2 text-sm text-muted-foreground">
+                    <li>hello@mg-fashion.com</li>
+                    <li>+1 (415) 555 0142</li>
+                    <li>By appointment only</li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-border">
+            <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-2 px-6 py-6 text-xs text-muted-foreground md:flex-row md:items-center lg:px-10">
+                <span id="copyright">© 2026 MG Fashion. All rights reserved.</span>
+                <span class="tracking-[0.2em] uppercase">Made in the atelier</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://memunagandhi.github.io/MG-fashion-/sitemap.xml
