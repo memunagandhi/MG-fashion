@@ -57,9 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 const formData = new FormData(contactForm);
+                const params = new URLSearchParams(formData);
+
                 await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
-                    body: formData,
+                    body: params,
                     mode: 'no-cors'
                 });
 
